@@ -1,0 +1,21 @@
+{
+  "name": "tree-drawing-bmi",
+  "version": "0.0.0",
+  "authors": [
+    "Jack Bush"
+  ],
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "modularized-normalize-scss": "~3.0.3",
+    "scut": "~1.2.0"
+  }
+}
