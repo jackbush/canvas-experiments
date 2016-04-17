@@ -1,8 +1,7 @@
 var path = require('path');
 var fs = require('fs');
 
-module.exports = function(app) {
-
+module.exports = function (app) {
 	// Find controller filenames
 	var controllerNames = fs.readdirSync(path.resolve(__dirname + './../controllers'));
 
@@ -13,11 +12,11 @@ module.exports = function(app) {
 
 	// Load controllers
 	var controllers = {};
-	controllerNames.forEach(function(name) {
+	controllerNames.forEach(function (name) {
 		controllers[name] = require('../controllers/' + name);
-	})
+	});
 
-	app.get('/', function(req, res) {
+	app.get('/', function (req, res) {
 		res.render('index');
 	});
 };

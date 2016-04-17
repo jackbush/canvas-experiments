@@ -1,2 +1,1 @@
-gulp is yr god.
-serves out of /bin, but otherwise it's mostly not weird.
+Drawing a tree while a user meditates, using input from an EEG headset.

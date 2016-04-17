@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
 var path = require('path');
 var fs = require('fs');
 
-module.exports = function() {
-
+module.exports = function () {
 	// Find model filenames
 	var modelNames = fs.readdirSync(path.resolve(__dirname + './../models'));
 
@@ -13,15 +12,15 @@ module.exports = function() {
 	}
 
 	// Register models
-	modelNames.forEach(function(name) {
-	    mongoose.model(name, require('../models/' + name));
+	modelNames.forEach(function (name) {
+		mongoose.model(name, require('../models/' + name));
 	});
 
 	// Connect to database
 	var localDatabase = 'mongodb://localhost/tree-drawing-bmi';
 	var uriString = process.env.MONGOLAB_URI || localDatabase;
 
-	mongoose.connect(uriString, function(err, res) {
+	mongoose.connect(uriString, function (err, res) {
 		if (err) {
 			console.log('ERROR connecting to: ' + uriString + '. ' + err);
 		} else {
