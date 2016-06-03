@@ -1,7 +1,21 @@
-// SPACING
-$font-size-base: 18px;
+// Font sizes
+$fs-base: 18px;
 
-// COLOURS
-$lightgrey: #f4f6f7;
-$copy-black: #383E44;
-$copy-light: #96A5B4;
+// Colours
+$black: #171A26;
+$slate: #58595B;
+$prussian: #13283A;
+$petrol: #3D5C69;
+$saphire: #43538E;
+$olive: #676E3F;
+$ochre: #EDAF50;
+$bronze: #B08F6E;
+$grey-2: #D1D3D4;
+$grey-3: #DCDDDE;
+
+// Other
+$lightgrey: rgb(243,244,243);
+$line: #D8D8D8;
+
+// Border
+$border: 1px solid $line;
