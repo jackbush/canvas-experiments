@@ -29767,11 +29767,11 @@ module.exports = p5;
 });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],"/Users/jackbush/Repos/tree-drawing-bmi/public/js/src-main/index.js":[function(require,module,exports){
+},{}],"/Users/jackbush/Repos/tree-drawing-bmi/public/js/_main/index.js":[function(require,module,exports){
 var p5 = require('p5');
 console.log(p5);
 
-},{"p5":"/Users/jackbush/Repos/tree-drawing-bmi/node_modules/p5/lib/p5.js"}]},{},["/Users/jackbush/Repos/tree-drawing-bmi/public/js/src-main/index.js"])
+},{"p5":"/Users/jackbush/Repos/tree-drawing-bmi/node_modules/p5/lib/p5.js"}]},{},["/Users/jackbush/Repos/tree-drawing-bmi/public/js/_main/index.js"])
 
 
-//# sourceMappingURL=main.output.js.map
+//# sourceMappingURL=main.js.map

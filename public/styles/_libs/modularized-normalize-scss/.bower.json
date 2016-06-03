@@ -16,7 +16,7 @@
     "tag": "v3.0.3",
     "commit": "fb7c5c4cb83cba9b56bccb9632ce506e9b53c7f4"
   },
-  "_source": "git://github.com/hail2u/normalize.scss.git",
+  "_source": "https://github.com/hail2u/normalize.scss.git",
   "_target": "~3.0.3",
   "_originalSource": "modularized-normalize-scss"
 }

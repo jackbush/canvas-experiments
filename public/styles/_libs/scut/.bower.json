@@ -39,7 +39,7 @@
     "tag": "1.2.1",
     "commit": "be142c24ade50ad4340a4501854e5b8b642c5566"
   },
-  "_source": "git://github.com/davidtheclark/scut.git",
+  "_source": "https://github.com/davidtheclark/scut.git",
   "_target": "~1.2.0",
   "_originalSource": "scut"
 }

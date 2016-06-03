@@ -13,8 +13,7 @@
     "node_modules",
     "bower_components"
   ],
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "modularized-normalize-scss": "~3.0.3",
     "scut": "~1.2.0"
   }
