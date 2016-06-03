@@ -10,7 +10,12 @@ var sketch = function (p5) {
 		treeCanvas.parent(containerId);
 		p5.background(colours.prussian);
 
-		socket = io.connect('http://localhost:8080') || io.connect('https://aqueous-everglades-22305.herokuapp.com/:8080');
+		// try {
+		socket = io.connect('https://aqueous-everglades-22305.herokuapp.com/:8080');
+		// } catch {
+		// 	socket = io.connect('http://localhost:8080');
+		// }
+
 		socket.on('mouse', function (data) {
 			p5.noStroke();
 			p5.ellipse(data.x, data.y, 10, 10);
