@@ -1,3 +1,7 @@
+// Simulate config options from other environments by
+// customising the .env file in your project's root folder.
+require('dotenv').load();
+
 var express = require('express');
 var path = require('path');
 var app = express();
