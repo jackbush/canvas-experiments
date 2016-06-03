@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // Load models and connect to database
-require('./config/db.js')();
+// require('./config/db.js')();
 
 // Middleware
 require('./config/middleware.js')(app);

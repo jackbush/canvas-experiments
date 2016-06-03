@@ -16,7 +16,5 @@ module.exports = function (app) {
 		controllers[name] = require('../controllers/' + name);
 	});
 
-	app.get('/', function (req, res) {
-		res.render('index');
-	});
+	app.get('/', controllers.index);
 };
