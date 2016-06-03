@@ -14,7 +14,6 @@
     "bower_components"
   ],
   "dependencies": {
-    "modularized-normalize-scss": "~3.0.3",
-    "scut": "~1.2.0"
+    "modularized-normalize-scss": "~3.0.3"
   }
 }
