@@ -24,7 +24,6 @@ require('./config/errorHandler.js')(app);
 
 // Socket!
 
-// var io = require('socket.io')(express.createServer());
 var server = app.listen(8080);
 var io = require('socket.io').listen(server);
 
@@ -32,7 +31,8 @@ io.sockets.on('connection',
 	function (socket) {
 		console.log('connected to: ' + socket.id);
 		socket.on('mouse', function (data) {
-			socket.broadcast.emit('mouse', data);
+			// socket.broadcast.emit('mouse', data);
+			io.sockets.emit('mouse', data);
 		});
 	}
 );

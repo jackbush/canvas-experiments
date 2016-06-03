@@ -2,9 +2,9 @@
 var P5 = require('p5');
 
 // Require sketches
-var tree = require('./_tree.js');
+var lines = require('./_lines.js');
 
 // Run sketches as new p5 instances
 (function () {
-	return new P5(tree.sketch, tree.containerId);
+	return new P5(lines.sketch, lines.containerId);
 })();
