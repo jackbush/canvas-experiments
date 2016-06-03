@@ -1,4 +1,4 @@
-module.exports = {
+var colours = {
 	black: '#171A26',
 	slate: '#58595B',
 	prussian: '#13283A',
@@ -11,3 +11,5 @@ module.exports = {
 	grey3: '#DCDDDE',
 	line: '#D8D8D8'
 };
+
+module.exports = colours;
