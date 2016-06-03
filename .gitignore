@@ -11,7 +11,7 @@ pids
 
 # Dependency directory
 node_modules
-#public/styles/_libs
+public/styles/_libs
 
 # Ignore .DS_Store files on OS X
 .DS_Store
