@@ -3,7 +3,7 @@ var fs = require('fs');
 
 module.exports = function (app) {
 	// Find controller filenames
-	var controllerNames = fs.readdirSync(path.resolve(__dirname + './../controllers'));
+	var controllerNames = fs.readdirSync(path.resolve(__dirname, './../controllers'));
 
 	// Trim extensions from filenames
 	for (var i = 0; i < controllerNames.length; i++) {
@@ -16,5 +16,15 @@ module.exports = function (app) {
 		controllers[name] = require('../controllers/' + name);
 	});
 
+	// Home
 	app.get('/', controllers.index);
+
+	// Experiments
+	app.get('/lines/', function (req, res) {
+		res.render('lines-sketch');
+	});
+
+	// Journeys
+	app.get('/journey-to-the-cosmic-sea/', controllers.cosmicSea);
+	app.get('/iceland/', controllers.iceland);
 };

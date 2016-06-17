@@ -1,6 +1,7 @@
 // CORE
 @import '_core/bower';
 @import '_core/variables';
+@import '_core/animation';
 
 // HOUSEKEEPING
 *,
@@ -10,7 +11,122 @@
 
 html,
 body {
-    max-width: 100%;
-    overflow-x: hidden;
-    font-family: sans-serif;
+	max-width: 100%;
+	overflow-x: hidden;
+	font-family: sans-serif;
+	line-height: 1.6;
 }
+
+img {
+	max-width: 100%;
+}
+
+.page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: calc(100vh - 120px);
+	letter-spacing: -0.31em;
+}
+
+	.page__major,
+	.page__minor {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 10vh;
+		letter-spacing: normal;
+		max-height: 70vh;
+		overflow: scroll;
+	}
+
+
+	.page__major {
+		width: 60vw;
+		margin: 10vh 5vw 0 5vw;
+	}
+	.page__minor {
+		width: 25vw;
+
+		* {
+			margin-top: 0;
+		}
+	}
+
+.storyline {
+	position: fixed;
+	width: 100vw;
+	height: 120px;
+	bottom: 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 61.67vw;
+		left: 5vw;
+		height: 1px;
+		top: 0;
+		border-top: 1px solid grey;
+		z-index: -100;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 28.333vw;
+		right: 5vw;
+		height: 1px;
+		top: 0;
+		border-top: 1px dotted grey;
+		z-index: -100;
+	}
+}
+
+.storyline__point {
+	position: absolute;
+	top: -12px;
+	left: 5vw;
+	width: 24px;
+	height: 24px;
+
+	border: 1px solid grey;
+	background: white;
+	border-radius: 100%;
+
+	transition: 1000ms;
+	cursor: pointer;
+}
+
+.storyline__point--current {
+	left: 66.67vw;
+
+	&::after {
+		content: '';
+		position: absolute;
+		height: calc(90vh - 120px);
+		width: 1px;
+		background: grey;
+		bottom: 12px;
+		left: 11px;
+		z-index: -1;
+	}
+}
+
+.storyline__point--next {
+	left: 95vw;
+	border-style: dotted;
+	animation: pulse 1800ms linear infinite both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

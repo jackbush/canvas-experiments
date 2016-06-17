@@ -2,9 +2,15 @@
 var P5 = require('p5');
 
 // Require sketches
-var lines = require('./_lines.js');
+var drawings = [
+	require('./_lines.js')
+];
 
-// Run sketches as new p5 instances
-(function () {
-	return new P5(lines.sketch, lines.containerId);
-})();
+// Render if the containerId is present
+for (var i = 0; i < drawings.length; i++) {
+	if (document.getElementById(drawings[i].containerId)) {
+		(function () {
+			return new P5(drawings[i].sketch, drawings[i].containerId);
+		})();
+	}
+}
