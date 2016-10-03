@@ -9,7 +9,26 @@ var colours = {
 	bronze: '#B08F6E',
 	grey2: '#D1D3D4',
 	grey3: '#DCDDDE',
-	line: '#D8D8D8'
+	line: '#D8D8D8',
+	background: {
+		hex: '#fafafa'
+	},
+	darkblue: {
+		hex: '#1C2242',
+		r: 28,
+		g: 34,
+		b: 66
+	},
+	midblue: {
+		r: 60,
+		g: 140,
+		b: 180
+	},
+	lightblue: {
+		r: 83,
+		g: 193,
+		b: 240
+	}
 };
 
 module.exports = colours;

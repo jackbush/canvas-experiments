@@ -1,11 +1,9 @@
-var colours = require('./_colours.js');
-var io = require('socket.io-client');
+var colours = require('./__colours.js');
 var p5 = require('p5');
 
-var containerId = 'linesSketchContainer';
+var containerId = 'jsSketchLines';
 
 var sketch = function (p) {
-	var socket;
 	var paths = [];
 	var painting = false;
 	var next = 0;
@@ -18,16 +16,6 @@ var sketch = function (p) {
 		p.background(colours.prussian);
 		current = p.createVector(0, 0);
 		previous = p.createVector(0, 0);
-
-		socket = io.connect('10.0.1.6:8080');
-
-		socket.on('mouse', function (data) {
-			next = 0;
-			painting = true;
-			previous.x = data.x;
-			previous.y = data.y;
-			paths.push(new Path());
-		});
 	};
 
 	p.windowResized = function () {
@@ -40,7 +28,12 @@ var sketch = function (p) {
 			x: p.mouseX,
 			y: p.mouseY
 		};
-		socket.emit('mouse', data);
+
+		next = 0;
+		painting = true;
+		previous.x = data.x;
+		previous.y = data.y;
+		paths.push(new Path());
 	};
 
 	p.mouseReleased = function () {
