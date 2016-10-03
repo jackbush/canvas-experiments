@@ -1,9 +1,5 @@
-# Draw a tree with your brain
-This app takes input from a simple EEG machine and uses the signals coming off your brain to generatively draw a tree. The tree responds to every fluctuation in your concentration. For best results, try meditating for ten minutes.
-
-### Use
----
-This is part of a series of experiments using a ThinkGear EEG headset. It involves a slightly messy setup, using [this package](https://github.com/jackbush/neurosky-data-server).
+# Portfolio site
+This repo has been many things, and is currently morphing from a discordant series of experiments into a sort of portfolio site.
 
 ### Installation
 ---
@@ -30,11 +26,11 @@ $ gulp
 
 ### Linting
 ---
-There's not a linter, but if you run `npm test` it'll check the front-end Javascript files against [Happiness guidelines](https://github.com/JedWatson/happiness) and maybe give you some pointers.
+There's not a proper linter, but if you run `npm test` it'll check the front-end Javascript files against [Happiness guidelines](https://github.com/JedWatson/happiness) and maybe give you some pointers.
 
 ### Deployment
 ---
-Deployment is done through NPM using itself, Bower and Gulp. Bower installation is set as a post-install script with NPM, then Gulp compiles and serves everything. The deployment task can be tested locally by running.
+Deployment is done with Gulp, but it runs through NPM for simplicity. The deployment task can be tested locally by running.
 
 ```
 $ npm start

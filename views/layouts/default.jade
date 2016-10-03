@@ -5,12 +5,13 @@ html
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
-		title ...
-		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+		title Jack Bush
+		//- link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 		link(href="/styles/output/main.css", rel="stylesheet")
 
 	body
+		include ../partials/nav
 		block content
 		script(src='/js/output/main.js')
 		script(src='/js/output/sketches.js')

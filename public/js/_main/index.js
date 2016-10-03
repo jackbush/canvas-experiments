@@ -1,1 +1,1 @@
-// Non-p5 scripts here
+require('./_nav.js');
