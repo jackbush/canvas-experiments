@@ -4,6 +4,7 @@ var P5 = require('p5');
 // Require sketches
 var drawings = [
 	require('./_lines.js'),
+	require('./_constellations.js'),
 	require('./_blob.js')
 ];
 
