@@ -8,7 +8,7 @@ var app = express();
 
 // Configure view engine
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // Load models and connect to database
 // require('./config/db.js')();
