@@ -20,9 +20,14 @@
 		transform: scale(1);
 	}
 }
+	.menu__header {
+		font-size: 18px;
+		font-weight: 400;
+		margin: 18px 0 3px 0;
+	}
 
 	.menu__item {
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: 300;
 		line-height: 1.8;
 

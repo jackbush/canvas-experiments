@@ -13,14 +13,14 @@ var sketch = function (p) {
 	p.setup = function () {
 		var linesCanvas = p.createCanvas(p.windowWidth, p.windowHeight);
 		linesCanvas.parent(containerId);
-		p.background(colours.prussian);
+		p.background(colours.petrol);
 		current = p.createVector(0, 0);
 		previous = p.createVector(0, 0);
 	};
 
 	p.windowResized = function () {
 		p.resizeCanvas(p.windowWidth, p.windowHeight);
-		p.background(colours.prussian);
+		p.background(colours.petrol);
 	};
 
 	p.mousePressed = function () {
@@ -41,7 +41,7 @@ var sketch = function (p) {
 	};
 
 	p.draw = function () {
-		p.background(colours.prussian);
+		p.background(colours.petrol);
 
 		if (p.millis() > next && painting) {
 			current.x = p.mouseX;

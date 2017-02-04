@@ -28,7 +28,7 @@ var sketch = function (p) {
 	};
 
 	p.draw = function () {
-		frame += 0.003;
+		frame += 0.001;
 		p.background(colours.prussian);
 
 		lines = [];
