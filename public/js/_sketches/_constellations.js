@@ -33,17 +33,16 @@ var sketch = function (p) {
 
 		lines = [];
 
-		points.forEach(function (point) {
+		points.forEach(function (point, index) {
 			point.update();
-			points.forEach(function (secondPoint) {
-				if (point !== secondPoint) {
-					if (point.position && secondPoint.position) {
-						if (point.position.dist(secondPoint.position) < maxLength) {
-							lines.push(new Line(point, secondPoint));
-						}
-					}
+			for (var i = index + 1; i < points.length; i++) {
+				if (point.position &&
+					points[i].position &&
+					point.position.dist(points[i].position) < maxLength
+				) {
+					lines.push(new Line(point, points[i]));
 				}
-			});
+			}
 			point.display();
 		});
 	};
