@@ -1,22 +1,23 @@
 var colours = require('./__colours.js');
-var p5 = require('p5');
+// var p5 = require('p5');
 
 var containerId = 'jsSketchConstellations';
 
 var sketch = function (p) {
-	var numberOfPoints = 100;
-	var pointDiameter = 4;
+	var numberOfPoints = 120;
+	var maxDiameter = 10;
+	var minDiameter = 4;
+	var maxLength = 100;
 	var points = [];
-
+	var lines;
+	var frame = 0;
 
 	p.setup = function () {
 		var linesCanvas = p.createCanvas(p.windowWidth, p.windowHeight);
 		linesCanvas.parent(containerId);
 		p.background(colours.prussian);
-		p.stroke(255);
-		p.fill(255);
 
-		for(var i = 0; i < numberOfPoints; i++) {
+		for (var i = 0; i < numberOfPoints; i++) {
 			points.push(new Point());
 		}
 	};
@@ -26,32 +27,50 @@ var sketch = function (p) {
 		p.background(colours.prussian);
 	};
 
-	p.mousePressed = function () {};
-
-	p.mouseReleased = function () {};
-
 	p.draw = function () {
+		frame += 0.003;
+		p.background(colours.prussian);
+
+		lines = [];
+
 		points.forEach(function (point) {
-			// point.update();
+			point.update();
+			points.forEach(function (secondPoint) {
+				if (point !== secondPoint) {
+					if (point.position && secondPoint.position) {
+						if (point.position.dist(secondPoint.position) < maxLength) {
+							lines.push(new Line(point, secondPoint));
+						}
+					}
+				}
+			});
 			point.display();
-		})
+		});
 	};
 
 	function Point () {
-		this.diameter = pointDiameter;
+		this.diameter = Math.random() * (maxDiameter - minDiameter) + minDiameter;
 		this.startX = Math.random() * p.windowWidth;
 		this.startY = Math.random() * p.windowHeight;
-		this.position = p.createVector(this.startX, this.startY);
-	};
+		this.range = 2 * Math.random() - 0.5;
+	}
 
 	Point.prototype.update = function () {
-		// move a bit
+		var deltaX = 100 / this.range * Math.sin(frame);
+		var deltaY = 100 / this.range * Math.cos(frame);
+		this.position = p.createVector(this.startX + deltaX, this.startY + deltaY);
 	};
 
 	Point.prototype.display = function () {
-		// console.log(this.position);
+		p.noStroke();
+		p.fill(200);
 		p.ellipse(this.position.x, this.position.y, this.diameter, this.diameter);
 	};
+
+	function Line (pointA, pointB) {
+		p.stroke(250, 250, 250, maxLength - pointA.position.dist(pointB.position));
+		p.line(pointA.position.x, pointA.position.y, pointB.position.x, pointB.position.y);
+	}
 };
 
 module.exports = {
