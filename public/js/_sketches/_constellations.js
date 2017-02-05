@@ -5,31 +5,38 @@ var containerId = 'jsSketchConstellations';
 
 var sketch = function (p) {
 	var numberOfPoints = 120;
-	var maxDiameter = 10;
-	var minDiameter = 4;
+	var maxDiameter = 20;
+	var minDiameter = 6;
 	var maxLength = 100;
+	var strokeWidth = 2;
 	var points = [];
+	// var fakeStars = 50;
+	// var auxStars = [];
 	var lines;
 	var frame = 0;
 
 	p.setup = function () {
 		var linesCanvas = p.createCanvas(p.windowWidth, p.windowHeight);
 		linesCanvas.parent(containerId);
-		p.background(colours.prussian);
+		p.background(colours.grey3);
 
 		for (var i = 0; i < numberOfPoints; i++) {
 			points.push(new Point());
 		}
+
+		// for (var i = 0; i < fakeStars; i++) {
+		// 	auxStars.push(new Point());
+		// }
 	};
 
 	p.windowResized = function () {
 		p.resizeCanvas(p.windowWidth, p.windowHeight);
-		p.background(colours.prussian);
+		p.background(colours.grey3);
 	};
 
 	p.draw = function () {
 		frame += 0.001;
-		p.background(colours.prussian);
+		p.background(colours.grey3);
 
 		lines = [];
 
@@ -45,6 +52,11 @@ var sketch = function (p) {
 			}
 			point.display();
 		});
+
+		// auxStars.forEach(function (point) {
+		// 	point.update();
+		// 	point.display();
+		// });
 	};
 
 	function Point () {
@@ -62,12 +74,14 @@ var sketch = function (p) {
 
 	Point.prototype.display = function () {
 		p.noStroke();
-		p.fill(200);
+		p.fill(colours.prussian);
 		p.ellipse(this.position.x, this.position.y, this.diameter, this.diameter);
 	};
 
 	function Line (pointA, pointB) {
-		p.stroke(250, 250, 250, maxLength - pointA.position.dist(pointB.position));
+		p.strokeWeight(strokeWidth);
+		// i think this is the rgb for prussian
+		p.stroke(28, 34, 66, maxLength - pointA.position.dist(pointB.position));
 		p.line(pointA.position.x, pointA.position.y, pointB.position.x, pointB.position.y);
 	}
 };
