@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "gulp",
     "start": "gulp deploy",
     "postinstall": "bower install",
-    "test": " happiness -- public/js/_*/*.js"
+    "test": "happiness"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -33,16 +34,11 @@
     "gulp-uglify": "^1.5.3",
     "happiness": "^6.0.7",
     "http": "0.0.0",
-    "jade": "~1.11.0",
-    "jquery": "^2.2.0",
-    "mongoose": "^4.4.6",
     "morgan": "~1.6.1",
     "p5": "^0.4.23",
     "pug": "^2.0.0-beta10",
     "require-dir": "^0.3.0",
     "serve-favicon": "~2.3.0",
-    "socket.io": "^1.4.6",
-    "socket.io-client": "^1.4.6",
     "utf-8-validate": "^1.2.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
