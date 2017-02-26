@@ -3,13 +3,12 @@ This repo has been many things, and is currently morphing from a discordant seri
 
 ### Installation
 ---
-Built using Node and MongoDB. You'll need these installed to run locally
+Built using Node. You'll need this installed to run locally.
 
 Javascript packages are managed with NPM, and CSS packages are managed using Bower. To install, clone and then run
 
 ```
 $ npm install
-$ bower install
 ```
 
 ### Development
@@ -18,10 +17,10 @@ There are a set of Gulp tasks in `/gulp/tasks`, and a handy config file in `/gul
 
 The default task is set to compile Sass/SCSS and JS on save and refresh the browser when necessary (CSS is injected) via Browsersync.
 
-So, to get making things, just run:
+Gulp is called from NPM, so there's no need for global installs. To get making things, just run:
 
 ```
-$ gulp
+$ npm run dev
 ```
 
 ### Linting
