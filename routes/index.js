@@ -29,6 +29,6 @@ module.exports = function (app) {
 	});
 
 	// Journeys
-	app.get('/journey-to-the-cosmic-sea/', controllers.cosmicSea);
+	app.get('/cosmic-sea/', controllers.cosmicSea);
 	app.get('/iceland/', controllers.iceland);
 };

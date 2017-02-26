@@ -1,7 +1,7 @@
 // Stop Happiness from complaining about use of Element
 /* global Element */
 
-var elFullscreenTrigger = document.querySelector('.js-fullscreen-canvas');
+var allFullscreenTriggers = document.queryAllSelector('.js-fullscreen-canvas');
 
 function fullScreenCanvas () {
 	var elCanvas = document.querySelector('canvas');
@@ -11,4 +11,6 @@ function fullScreenCanvas () {
 	if (typeof InstallTrigger !== 'undefined') elCanvas.mozRequestFullScreen();
 }
 
-elFullscreenTrigger.addEventListener('click', fullScreenCanvas);
+allFullscreenTriggers.forEach(function (el) {
+	el.addEventListener('click', fullScreenCanvas);
+});
