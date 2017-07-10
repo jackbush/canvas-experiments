@@ -14,12 +14,14 @@ body {
 	max-width: 100%;
 	overflow-x: hidden;
 	font-family: sans-serif;
-	line-height: 1.6;
+	line-height: 1.5;
 }
 
 body {
-	font-family: 'open sans', sans-serif;
+	font-family: 'apercu', sans-serif;
 	font-weight: 300;
+	background: $c-grey;
+	color: $c-black;
 }
 
 img {
@@ -43,6 +45,10 @@ img {
 	margin: 0 auto;
 	width: 90vw;
 	max-width: 960px;
+
+	@media (max-width: 1024px) {
+		max-width: 640px;
+	}
 }
 
 
@@ -179,6 +185,17 @@ img {
 
 .contact-details {
 	margin: 0;
+
+	a {
+		color: $c-link;
+		text-decoration: none;
+		border-bottom: 1px solid $c-link;
+
+		transition: 200ms;
+		&:hover {
+			opacity: 0.85;
+		}
+	}
 }
 
 .header {
@@ -188,8 +205,10 @@ img {
 
 .title {
 	font-weight: 400;
-	font-size: 24px;
-	margin: 0 0 9px 0;
+	font-size: 30px;
+	margin: 6px 0 12px 0;
+
+	line-height: 1.2;
 }
 
 	.title--large {
@@ -199,41 +218,81 @@ img {
 		margin: 0;
 	}
 
-
-
-.sidebar {
-	opacity: 0.85;
-}
-
 .section {
 	margin-bottom: $gutter;
 }
 
-.section__title,
-.section__location {
+.section__title {
 	margin-top: 3px;
-	margin-bottom: 0;
+	margin-bottom: 0px;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 22px;
 }
 
-	.section__location {
-		font-size: 16px;
-		opacity: 0.85;
-	}
+.section__location {
+	margin-top: -3px;
+	margin-bottom: 9px;
+	font-weight: 400;
+	font-size: 18px;
+	opacity: 0.75;
+}
 
 .section__dates {
 	font-size: 14px;
-	// text-transform: uppercase;
 	font-weight: 300;
 	margin-top: 3px;
 	opacity: 0.7;
 }
 
-
-
 .body {
 	font-weight: 300;
-	line-height: 1.7;
+	line-height: 1.6;
 	margin: 0 0 9px 0;
+
+	a {
+		color: $c-link;
+		text-decoration: none;
+		border-bottom: 1px solid $c-link;
+
+		transition: 200ms;
+		&:hover {
+			opacity: 0.85;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.sidebar {
+		.section {
+			margin-bottom: 24px;
+		}
+
+		.section__title {
+			margin-top: 3px;
+			margin-bottom: 0;
+			font-weight: 400;
+			font-size: 18px;
+		}
+
+		.section__location {
+			margin-top: 3px;
+			margin-bottom: 0;
+			font-weight: 400;
+			font-size: 18px;
+			opacity: 0.75;
+		}
+
+		.section__dates {
+			font-size: 15px;
+			margin-top: 3px;
+			opacity: 0.75;
+			margin-bottom: 12px;
+		}
+
+		.body {
+			font-size: 15px;
+			line-height: 1.7;
+			opacity: 0.75;
+		}
+	}	
 }
