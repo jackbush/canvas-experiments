@@ -14,6 +14,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "modularized-normalize-scss": "~3.0.3"
+    "modularized-normalize-scss": "~3.0.3",
+    "csswizardry-grids": "^2.2.0"
   }
 }
