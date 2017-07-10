@@ -1,6 +1,6 @@
 // CORE
-@import '_core/bower';
 @import '_core/variables';
+@import '_core/bower';
 @import '_core/animation';
 
 // HOUSEKEEPING
@@ -42,7 +42,7 @@ img {
 	display: block;
 	margin: 0 auto;
 	width: 90vw;
-	max-width: 700px;
+	max-width: 960px;
 }
 
 
@@ -163,4 +163,77 @@ img {
 	color: white;
 	text-decoration: underline;
 	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.page--cv {
+	margin: 64px 0 42px 0;
+}
+
+.contact-details {
+	margin: 0;
+}
+
+.header {
+	margin-bottom: $gutter;
+}
+
+
+.title {
+	font-weight: 400;
+	font-size: 24px;
+	margin: 0 0 9px 0;
+}
+
+	.title--large {
+		text-transform: uppercase;
+		font-size: 48px;
+		font-weight: 700;
+		margin: 0;
+	}
+
+
+
+.sidebar {
+	opacity: 0.85;
+}
+
+.section {
+	margin-bottom: $gutter;
+}
+
+.section__title,
+.section__location {
+	margin-top: 3px;
+	margin-bottom: 0;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+	.section__location {
+		font-size: 16px;
+		opacity: 0.85;
+	}
+
+.section__dates {
+	font-size: 14px;
+	// text-transform: uppercase;
+	font-weight: 300;
+	margin-top: 3px;
+	opacity: 0.7;
+}
+
+
+
+.body {
+	font-weight: 300;
+	line-height: 1.7;
+	margin: 0 0 9px 0;
 }

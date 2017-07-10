@@ -31,4 +31,9 @@ module.exports = function (app) {
 	// Journeys
 	app.get('/cosmic-sea/', controllers.cosmicSea);
 	app.get('/iceland/', controllers.iceland);
+
+	// CV
+	app.get('/cv/', function (req, res) {
+		res.render('cv');
+	});
 };
