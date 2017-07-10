@@ -1,7 +1,7 @@
 // Stop Happiness from complaining about use of Element
 /* global Element */
 
-var allFullscreenTriggers = document.queryAllSelector('.js-fullscreen-canvas');
+var allFullscreenTriggers = document.querySelectorAll('.js-fullscreen-canvas');
 
 function fullScreenCanvas () {
 	var elCanvas = document.querySelector('canvas');
