@@ -296,3 +296,20 @@ img {
 		}
 	}	
 }
+
+@media (max-width: 1024px) {
+	.sidebar {
+		.section__dates {
+			margin-top: -3px;
+			margin-bottom: 9px;
+			font-weight: 400;
+			font-size: 18px;
+			opacity: 0.75;
+		}
+
+		.section__location {
+			margin-top: -3px;
+			margin-bottom: 0;
+		}
+	}
+}
