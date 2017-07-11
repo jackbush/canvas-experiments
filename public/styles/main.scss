@@ -27,8 +27,9 @@ body {
 	font-weight: 300;
 	// background: $c-grey2;
 	color: $c-black;
-	margin: 12px;
-	// position: relative;
+	@media (min-width: 480px) {
+		margin: 12px;
+	}
 }
 
 img {
@@ -50,7 +51,7 @@ img {
 .container {
 	display: block;
 	margin: 0 auto;
-	width: 90vw;
+	width: 85vw;
 	max-width: 960px;
 
 	@media (max-width: 1024px) {
