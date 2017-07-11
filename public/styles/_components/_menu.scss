@@ -43,10 +43,11 @@
 
 .menu__open,
 .menu__close {
-	position: absolute;
+	position: fixed;
 	width: 36px;
 	height: 36px;
 	outline: none;
+	z-index: 1000;
 }
 
 .menu__open {

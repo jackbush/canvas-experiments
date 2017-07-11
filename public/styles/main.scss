@@ -27,6 +27,8 @@ body {
 	font-weight: 300;
 	// background: $c-grey2;
 	color: $c-black;
+	margin: 12px;
+	// position: relative;
 }
 
 img {
@@ -186,7 +188,7 @@ img {
 
 .page--cv {
 	position: relative;
-	padding: 64px 0 42px 0;
+	padding: 72px 0 42px 0;
 
 	.page--cv--inner {
 		animation: fadeIn 1000ms;
