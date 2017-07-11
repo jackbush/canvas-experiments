@@ -28,7 +28,8 @@ var colours = {
 		r: 83,
 		g: 193,
 		b: 240
-	}
+	},
+	pink: '#fac3be'
 };
 
 module.exports = colours;

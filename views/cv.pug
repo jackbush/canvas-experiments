@@ -1,7 +1,8 @@
 extends ./layouts/default
 
 block content
-	.page--cv#gradient: .container
+	.full-screen.sketch#jsCVBackground
+	.page--cv#gradient: .container.page--cv--inner
 		.header: .grid.grid--middle
 			.grid__item.one-third.portable--one-whole
 				h1.title.title--large Jack Bush
@@ -17,7 +18,9 @@ block content
 					h3.section__title Head of Product
 					h4.section__location Everledger: October 2016 – Present
 
-					p.body Responsible for designing and implementing solutions for a diverse range of B2B and B2C clients, and using this work to create a suite of modular, re-usable core products.
+					p.body Responsible for designing and implementing a suite of modular, re-usable core products to satisfy the needs of all clients.
+
+					//- p.body 
 
 					p.body Building browser-based prototyping tools so that Business Analysts can customise core products, to test schemas and user journeys while on-site with clients.
 
@@ -90,7 +93,7 @@ block content
 
 				.section.sidebar__section
 					h3.section__title Winner: Best Exhibition Design
-					p.section__dates Design Week (2016)
+					p.section__dates Design Week 2016
 
 					p.body Tate Sensorium was an immersive, multisensory exhibition at Tate Britain.
 
@@ -100,15 +103,15 @@ block content
 
 				.section.sidebar__section
 					h3.section__title Winner: Natural History Museum Hackathon
-					p.section__dates Over the Air (2016)
+					p.section__dates Over the Air 2016
 
 					p.body Challenge was to present the Natural History Museum's digital collection to a web audience. As a team of two, we made a browser-based 3D experience where users can explore audio recordings of birds and insects, with surround sound.
 
 					p.body: a(target='_blank' href='http://www.gilbertsinnott.com/nhm/') Project
 
 				.section.sidebar__section
-					h3.section__title Bronze award: Best use of digital to an investment audience
-					p.section__dates Digital Impact Awards (2015)
+					h3.section__title Bronze: Best use of digital to an investment audience
+					p.section__dates Digital Impact Awards 2015
 
 					p.body Website with rich interactive infographics and video, communicating ten stories of growth, innovation and transformation at Alcatel-Lucent.
 
