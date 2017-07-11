@@ -195,6 +195,7 @@ img {
 
 #gradient:target {
 	position: relative;
+	background: $c-grey2;
 
 	&::before,
 	&::after {
@@ -232,7 +233,9 @@ img {
 
 		transition: 200ms;
 		&:hover {
-			opacity: 0.85;
+			// opacity: 0.75;
+			color: darken($c-link, 10%);
+			border-color: darken($c-link, 10%);
 		}
 	}
 }
@@ -331,7 +334,6 @@ img {
 		.body {
 			font-size: 15px;
 			line-height: 1.7;
-			opacity: 0.75;
 		}
 	}	
 }
